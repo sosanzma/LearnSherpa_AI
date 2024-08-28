@@ -1,7 +1,7 @@
 import os
 from crewai import Agent, Task, Crew, Process
 from crewai.base import CrewBase, agent, task, crew
-from tools import searcher_tool, book_review_tool, reddit_tool  # Importing the tools
+from tools import searcher_tool, book_review_tool, RedditOpinionSearch  # Importing the tools
 # Environment variables for API keys
 from dotenv import load_dotenv
 load_dotenv()
@@ -24,7 +24,8 @@ class AgentBooksV1Crew():
 		return Agent(
 			config=self.agents_config['searcher'],
 			tools=[searcher_tool],
-			verbose=True
+			verbose=True,
+			llm=self.get_llm('gpt-4o-mini')  # Specify the LLM for this agent
 		)
 
 	@agent
@@ -33,7 +34,8 @@ class AgentBooksV1Crew():
 		return Agent(
 			config=self.agents_config['best_books_researcher'],
 			tools=[book_review_tool],
-			verbose=True
+			verbose=True,
+			llm=self.get_llm('gpt-4o-mini')  # Specify the LLM for this agent
 		)
 
 	@agent
@@ -41,8 +43,9 @@ class AgentBooksV1Crew():
 		"""Reddit Reviewer agent for summarizing Reddit opinions on books"""
 		return Agent(
 			config=self.agents_config['reddit_reviewer'],
-			tools=[reddit_tool],
-			verbose=True
+			tools=[RedditOpinionSearch],
+			verbose=True,
+			llm=self.get_llm('gpt-4o-mini')  # Specify the LLM for this agent
 		)
 
 	@agent
@@ -50,8 +53,20 @@ class AgentBooksV1Crew():
 		"""Orchestrator agent for compiling the final report"""
 		return Agent(
 			config=self.agents_config['orchestrator'],
-			verbose=True
+			verbose=True,
+			llm=self.get_llm('gpt-4o-mini')  # Specify the LLM for this agent
 		)
+
+	def get_llm(self, model_name):
+		"""Helper method to get the LLM based on the model name"""
+		if model_name.startswith('gpt'):
+			from langchain.chat_models import ChatOpenAI
+			return ChatOpenAI(model_name=model_name)
+		elif model_name.startswith('claude'):
+			from langchain.chat_models import ChatAnthropic
+			return ChatAnthropic(model=model_name)
+		else:
+			raise ValueError(f"Unsupported model: {model_name}")
 
 	@task
 	def search_books_task(self) -> Task:

@@ -5,7 +5,7 @@ searcher:
   backstory: >
     You are an expert internet researcher who excels at finding credible book recommendations from well-known figures.
   tools:
-    - WebsiteSearchTool
+    - SearchTools
 
 best_books_researcher:
   role: Top Books Finder
@@ -23,7 +23,7 @@ reddit_reviewer:
   backstory: >
     You are deeply embedded in online communities, especially Reddit, and can efficiently summarize public opinions.
   tools:
-    - RedditAPI
+    - RedditOpinionSearch
 
 orchestrator:
   role: Report Compiler
