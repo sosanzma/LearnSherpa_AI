@@ -1,7 +1,8 @@
 import os
 from crewai import Agent, Task, Crew, Process
-from crewai.base import CrewBase, agent, task, crew
-from tools import searcher_tool, book_review_tool, RedditOpinionSearch  # Importing the tools
+from .tools.searcher_tool import SearchTools
+from .tools.BookReviewTool import BookReviewTool
+from .tools.RedditOpinionSearch import RedditOpinionSearch
 # Environment variables for API keys
 from dotenv import load_dotenv
 load_dotenv()
@@ -12,33 +13,32 @@ load_dotenv()
 # Check our tools documentations for more information on how to use them
 # from crewai_tools import SerperDevTool
 
-@CrewBase
+
 class AgentBooksV1Crew():
 	"""AgentBooksV1 crew"""
 	agents_config = 'config/agents.yaml'
 	tasks_config = 'config/tasks.yaml'
 
-	@agent
+
 	def searcher(self) -> Agent:
 		"""Searcher agent for finding book recommendations by specified people"""
 		return Agent(
 			config=self.agents_config['searcher'],
-			tools=[searcher_tool],
+			tools=[SearchTools],
 			verbose=True,
 			llm=self.get_llm('gpt-4o-mini')  # Specify the LLM for this agent
 		)
 
-	@agent
+
 	def best_books_researcher(self) -> Agent:
 		"""Best Books Researcher agent for finding top-rated books in the genre"""
 		return Agent(
 			config=self.agents_config['best_books_researcher'],
-			tools=[book_review_tool],
+			tools=[BookReviewTool],
 			verbose=True,
 			llm=self.get_llm('gpt-4o-mini')  # Specify the LLM for this agent
 		)
 
-	@agent
 	def reddit_reviewer(self) -> Agent:
 		"""Reddit Reviewer agent for summarizing Reddit opinions on books"""
 		return Agent(
@@ -48,7 +48,7 @@ class AgentBooksV1Crew():
 			llm=self.get_llm('gpt-4o-mini')  # Specify the LLM for this agent
 		)
 
-	@agent
+
 	def orchestrator(self) -> Agent:
 		"""Orchestrator agent for compiling the final report"""
 		return Agent(
@@ -68,7 +68,6 @@ class AgentBooksV1Crew():
 		else:
 			raise ValueError(f"Unsupported model: {model_name}")
 
-	@task
 	def search_books_task(self) -> Task:
 		"""Task for the Searcher agent to find book recommendations"""
 		return Task(
@@ -76,7 +75,6 @@ class AgentBooksV1Crew():
 			agent=self.searcher
 		)
 
-	@task
 	def find_best_books_task(self) -> Task:
 		"""Task for the Best Books Researcher agent to find top-rated books"""
 		return Task(
@@ -84,7 +82,7 @@ class AgentBooksV1Crew():
 			agent=self.best_books_researcher
 		)
 
-	@task
+
 	def gather_reddit_reviews_task(self) -> Task:
 		"""Task for the Reddit Reviewer agent to gather and summarize Reddit opinions"""
 		return Task(
@@ -92,7 +90,7 @@ class AgentBooksV1Crew():
 			agent=self.reddit_reviewer
 		)
 
-	@task
+
 	def compile_final_report_task(self) -> Task:
 		"""Task for the Orchestrator agent to compile the final report"""
 		return Task(
@@ -106,7 +104,7 @@ class AgentBooksV1Crew():
 			output_file='book_recommendations_report.md'
 		)
 
-	@crew
+
 	def crew(self) -> Crew:
 		"""Creates the BookRecommendationCrew crew"""
 		return Crew(
