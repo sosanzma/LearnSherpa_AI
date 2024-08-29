@@ -2,7 +2,7 @@ import json
 import os
 import requests
 from bs4 import BeautifulSoup
-from crewai_tools import BaseTool, tool
+from crewai_tools import BaseTool
 
 class RedditOpinionSearch(BaseTool):
     name: str = "Reddit Opinion Search"
@@ -13,9 +13,7 @@ class RedditOpinionSearch(BaseTool):
         self.api_key = os.getenv('SERPER_API_KEY')
         self.url = "https://google.serper.dev/search"
     
-    @tool("Search for book opinions on Reddit")
-    def search_reddit_opinions(self, book_title: str) -> str:
-        """Searches for Reddit opinions on a specific book."""
+    def _run(self, book_title: str) -> str:
         query = f"{book_title} book opinions site:reddit.com"
         payload = json.dumps({"q": query, "num": 5})
         headers = {

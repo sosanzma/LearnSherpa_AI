@@ -1,15 +1,13 @@
 import json
 import os
-
 import requests
-from langchain.tools import tool
+from crewai_tools import BaseTool
 
+class SearchTools(BaseTool):
+    name: str = "Search for book recommendations"
+    description: str = "Useful to search for book recommendations in a specific genre by given people"
 
-class SearchTools():
-
-    @tool("Search for book recommendations")
-    def search_book_recommendations(genre, person_1, person_2, person_3):
-        """Useful to search for book recommendations in a specific genre by given people"""
+    def _run(self, genre: str, person_1: str, person_2: str, person_3: str) -> str:
         print(f"Searching for {genre} books recommended by {person_1}, {person_2}, and {person_3}...")
         top_result_to_return = 5
         url = "https://google.serper.dev/search"

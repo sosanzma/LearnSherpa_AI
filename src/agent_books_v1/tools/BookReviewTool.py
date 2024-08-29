@@ -13,8 +13,7 @@ class BookReviewTool(BaseTool):
         self.api_key = os.getenv('SERPER_API_KEY')
         self.url = "https://google.serper.dev/search"
 
-    @tool("Find top books and reviews")
-    def find_top_books_and_reviews(self, genre: str) -> str:
+    def _run(self, genre: str) -> str:
         """Finds the top 3 books in a given genre and gathers reviews and opinions."""
         top_books = self.search_top_books(genre)
         results = []
