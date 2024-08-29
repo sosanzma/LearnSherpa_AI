@@ -3,33 +3,21 @@ search_books_task:
     Search for books in the {genre} recommended by {person_1}, {person_2}, and {person_3}.
   expected_output: >
     A list of books recommended by these figures, including links or sources.
-  agent: searcher  # Link to the Searcher agent
-  output_key: search_results  # Store the output under this key
 
 find_best_books_task:
   description: >
     Identify the top-rated books in the {genre}.
   expected_output: >
     A list of the top 3 books with a brief description and ratings.
-  agent: best_books_researcher  # Link to the Best Books Researcher agent
-  output_key: best_books  # Store the output under this key
 
 gather_reddit_reviews_task:
   description: >
     Find and summarize opinions from Reddit discussions on the books provided by the Searcher and Best Books Researcher.
   expected_output: >
     Summaries of Reddit discussions on each book.
-  agent: reddit_reviewer  # Link to the Reddit Reviewer agent
-  output_key: reddit_reviews  # Store the output under this key
 
 compile_final_report_task:
   description: >
     Compile a report that includes the selected books, their recommendations, public opinions, and a brief summary of each book.
   expected_output: >
     A final report combining all the findings, structured and easy to read.
-  agent: orchestrator  # Link to the Orchestrator agent
-  inputs:
-    search_results: search_books_task  # Input from the searcher's task output
-    best_books: find_best_books_task  # Input from the best books researcher's task output
-    reddit_reviews: gather_reddit_reviews_task  # Input from the Reddit reviewer’s task output
-  output_file: 'book_recommendations_report.md'  # File to store the report

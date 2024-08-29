@@ -4,8 +4,7 @@ searcher:
     Identify books in {genre} recommended by {person_1}, {person_2}, and {person_3}.
   backstory: >
     You are an expert internet researcher who excels at finding credible book recommendations from well-known figures.
-  tools:
-    - SearchTools
+
 
 best_books_researcher:
   role: Top Books Finder
@@ -13,8 +12,7 @@ best_books_researcher:
     Find the top 3 books in {genre} based on overall ratings and expert reviews.
   backstory: >
     You are a meticulous researcher who specializes in finding critically acclaimed books.
-  tools: 
-    - BookReviewTool
+
 
 reddit_reviewer:
   role: Public Opinion Analyst
@@ -22,8 +20,7 @@ reddit_reviewer:
     Summarize Reddit discussions on the selected books.
   backstory: >
     You are deeply embedded in online communities, especially Reddit, and can efficiently summarize public opinions.
-  tools:
-    - RedditOpinionSearch
+
 
 orchestrator:
   role: Report Compiler
