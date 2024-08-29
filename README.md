@@ -1,61 +1,107 @@
-# AgentBooksV1 Crew
+# AI-Powered Book Recommendation System
 
-Welcome to the AgentBooksV1 Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+## Overview
 
-## Installation
+This project is an AI-powered book recommendation system that utilizes a crew of AI agents to search, analyze, and compile book recommendations based on user input. The system focuses on finding books in a specified genre, gathering recommendations from notable figures, and analyzing public opinion.
 
-Ensure you have Python >=3.10 <=3.13 installed on your system. This project uses [Poetry](https://python-poetry.org/) for dependency management and package handling, offering a seamless setup and execution experience.
+## Features
 
-First, if you haven't already, install Poetry:
+- Search for book recommendations in a specific genre by given people
+- Identify top-rated books based on overall ratings and expert reviews
+- Gather and summarize opinions from Reddit discussions
+- Compile a comprehensive report with book recommendations, reviews, and summaries
+- Generate an interactive infographic of recommended books
 
-```bash
-pip install poetry
+## Project Structure
+
+- `main.py`: Entry point for running the crew locally
+- `crew.py`: Defines the AI agents and their tasks
+- `agents.yaml`: Configuration for AI agents
+- `tasks.yaml`: Definition of tasks for the AI agents
+- `tools/`: Contains custom tools used by the agents
+  - `SearchTools.py`: Tool for searching book recommendations
+  - `BookReviewTool.py`: Tool for finding top-rated books and reviews
+  - `RedditOpinionSearch.py`: Tool for gathering opinions from Reddit
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Set up environment variables:
+   - Create a `.env` file in the root directory
+   - Add your API keys:
+     ```
+     SERPER_API_KEY=your_serper_api_key
+     OPENAI_API_KEY=your_openai_api_key
+     ```
+
+## Usage
+
+### Running the Crew
+
+To run the book recommendation system:
+
+```python
+from agent_books_v1.crew import AgentBooksV1Crew
+
+inputs = {
+    'genre': 'neuroscience',
+    'person_1': 'Elon Musk',
+    'person_2': 'Mark Zuckerberg',
+    'person_3': 'Lex Fridman'
+}
+
+AgentBooksV1Crew().crew().kickoff(inputs=inputs)
 ```
 
-Next, navigate to your project directory and install the dependencies:
+### Training the Crew
 
-1. First lock the dependencies and then install them:
-```bash
-poetry lock
+To train the crew for a given number of iterations:
+
 ```
-```bash
-poetry install
-```
-### Customizing
-
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/agent_books_v1/config/agents.yaml` to define your agents
-- Modify `src/agent_books_v1/config/tasks.yaml` to define your tasks
-- Modify `src/agent_books_v1/crew.py` to add your own logic, tools and specific args
-- Modify `src/agent_books_v1/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-$ crewai run
-```
-or
-```bash
-poetry run agent_books_v1
+python main.py train 5 training_results.json
 ```
 
-This command initializes the agent_books_v1 Crew, assembling the agents and assigning them tasks as defined in your configuration.
+### Replaying Crew Execution
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+To replay the crew execution from a specific task:
 
-## Understanding Your Crew
+```
+python main.py replay task_id_here
+```
 
-The agent_books_v1 Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+### Testing the Crew
 
-## Support
+To test the crew execution and get results:
 
-For support, questions, or feedback regarding the AgentBooksV1 Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+```
+python main.py test 3 gpt-4
+```
 
-Let's create wonders together with the power and simplicity of crewAI.
+## Output
+
+The system generates a comprehensive report saved as `book_recommendations_report.md`, which includes:
+
+- List of recommended books
+- Top-rated books in the specified genre
+- Summaries of Reddit discussions for each book
+- Brief descriptions and ratings
+
+## Visualization
+
+The project includes a React component (`book-infographic.tsx`) that creates an interactive infographic of the recommended books. This component can be integrated into a web application to display the results in a visually appealing manner.
+
+## Customization
+
+You can customize the AI agents and their tasks by modifying the `agents.yaml` and `tasks.yaml` files. Add new tools in the `tools/` directory and update the `crew.py` file to incorporate them into the agent's capabilities.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
