@@ -1,5 +1,6 @@
 import os
 from crewai import Agent, Task, Crew, Process
+from crewai.crews.crew_output import CrewOutput
 from crewai.project import CrewBase, agent, crew, task
 from agent_books_v1.tools.searcher_tool import SearchTools
 import sys
@@ -156,7 +157,7 @@ import json
 from datetime import datetime
 
 def run_crew():
-    genre = 'Neuroscience'
+    genre = 'Physics'
     crew_instance = AgentBooksV1Crew()
     result = crew_instance.crew().kickoff(inputs={
         'genre': genre
@@ -171,12 +172,12 @@ def run_crew():
     # Generate a filename based on the genre and current timestamp
     filename = f"reports/{genre.replace(' ', '_').lower()}_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
 
+
+    result_str = str(result)
+
     # Write the result to a text file
     with open(filename, 'w') as f:
-        f.write(f"Book Recommendation Report for {genre.capitalize()}\n\n")
-        f.write(f"Generated on: {datetime.now().isoformat()}\n\n")
-        f.write("Results:\n\n")
-        f.write(result)
+        f.write(result_str)
 
     print(f"Report saved to {filename}")
 
