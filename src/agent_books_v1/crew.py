@@ -42,18 +42,6 @@ class AgentBooksV1Crew:
             return ChatAnthropic(model=model_name)
         else:
             raise ValueError(f"Unsupported model: {model_name}")
-        
-    @agent
-    def searcher(self) -> Agent:
-        """Searcher agent for finding book recommendations by specified people"""
-        return Agent(
-            role=self.agents_config['searcher']['role'],
-            goal=self.agents_config['searcher']['goal'],
-            backstory=self.agents_config['searcher']['backstory'],
-            tools=[SerperDevTool()],
-            verbose=True,
-            llm=self.get_llm('gpt-4o-mini')
-        )
     
     @agent
     def best_books_researcher(self) -> Agent:
@@ -64,8 +52,22 @@ class AgentBooksV1Crew:
             backstory=self.agents_config['best_books_researcher']['backstory'],
             tools=[SerperDevTool()],
             verbose=True,
+            allow_delegation=False,
             llm=self.get_llm('gpt-4o-mini')
         )
+        
+    @agent
+    def searcher_goodreads(self) -> Agent:
+        """Searcher agent for finding book opinons in Goodreads"""
+        return Agent(
+            role=self.agents_config['searcher_goodreads']['role'],
+            goal=self.agents_config['searcher_goodreads']['goal'],
+            backstory=self.agents_config['searcher_goodreads']['backstory'],
+            tools=[SerperDevTool()],
+            verbose=True,
+            llm=self.get_llm('gpt-4o-mini')
+        )
+    
     
     @agent
     def reddit_reviewer(self) -> Agent:
@@ -91,21 +93,22 @@ class AgentBooksV1Crew:
         )
 
     @task
-    def search_books_task(self) -> Task:
-        """Task for the Searcher agent to find book recommendations"""
-        return Task(
-            description=self.tasks_config['search_books_task']['description'],
-            agent=self.searcher(),
-            expected_output="A list of book recommendations based on the search criteria"
-        )
-
-    @task
     def find_best_books_task(self) -> Task:
         """Task for the Best Books Researcher agent to find top-rated books"""
         return Task(
             description=self.tasks_config['find_best_books_task']['description'],
             agent=self.best_books_researcher(),
-            expected_output="A list of top-rated books in the specified genre"
+            expected_output=self.tasks_config['find_best_books_task']['expected_output'],
+        )
+
+    @task
+    def gather_goodreads_reviews_task(self) -> Task:
+        """Task for the searcher_goodreads agent to find book reviews from people"""
+        return Task(
+            description=self.tasks_config['gather_goodreads_reviews_task']['description'],
+            agent=self.searcher_goodreads(),
+            context=[self.find_best_books_task()],
+            expected_output=self.tasks_config['gather_goodreads_reviews_task']['expected_output'],
         )
 
     @task
@@ -114,7 +117,8 @@ class AgentBooksV1Crew:
         return Task(
             description=self.tasks_config['gather_reddit_reviews_task']['description'],
             agent=self.reddit_reviewer(),
-            expected_output="A summary of Reddit opinions on the recommended books"
+            context=[self.find_best_books_task()],
+            expected_output=self.tasks_config['gather_reddit_reviews_task']['expected_output'],
         )
 
     @task
@@ -123,8 +127,8 @@ class AgentBooksV1Crew:
         return Task(
             description=self.tasks_config['compile_final_report_task']['description'],
             agent=self.orchestrator(),
-            context=[self.search_books_task(), self.find_best_books_task(), self.gather_reddit_reviews_task()],
-            expected_output="A comprehensive report on book recommendations with insights from various sources"
+            context=[self.gather_goodreads_reviews_task(), self.find_best_books_task(), self.gather_reddit_reviews_task()],
+            expected_output=self.tasks_config['compile_final_report_task']['expected_output'],
         )
 
     @crew
@@ -132,14 +136,14 @@ class AgentBooksV1Crew:
         """Creates the BookRecommendationCrew crew"""
         return Crew(
             agents=[
-                self.searcher(),
                 self.best_books_researcher(),
+                self.searcher_goodreads(),
                 self.reddit_reviewer(),
                 self.orchestrator()
             ],
             tasks=[
-                self.search_books_task(),
                 self.find_best_books_task(),
+                self.gather_goodreads_reviews_task(),
                 self.gather_reddit_reviews_task(),
                 self.compile_final_report_task()
             ],
@@ -147,15 +151,34 @@ class AgentBooksV1Crew:
             verbose=True
         )
 
+import os
+import json
+from datetime import datetime
+
 def run_crew():
+    genre = 'Neuroscience'
     crew_instance = AgentBooksV1Crew()
     result = crew_instance.crew().kickoff(inputs={
-        'genre': 'neuroscience',
-        'person_1': 'Elon Musk',
-        'person_2': 'Mark Zuckerberg',
-        'person_3': 'Lex Fridman'
+        'genre': genre
     })
     print(result)
+    print(type(result))
+
+    # Create a reports directory if it doesn't exist
+    if not os.path.exists('reports'):
+        os.makedirs('reports')
+
+    # Generate a filename based on the genre and current timestamp
+    filename = f"reports/{genre.replace(' ', '_').lower()}_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+
+    # Write the result to a text file
+    with open(filename, 'w') as f:
+        f.write(f"Book Recommendation Report for {genre.capitalize()}\n\n")
+        f.write(f"Generated on: {datetime.now().isoformat()}\n\n")
+        f.write("Results:\n\n")
+        f.write(result)
+
+    print(f"Report saved to {filename}")
 
 if __name__ == "__main__":
     run_crew()
