@@ -31,7 +31,7 @@ Agent Books V1 employs a sophisticated crew of AI agents, each specializing in d
 
 ### 📊 Example Report
 
-Check out this [example report for Sociology books](./reports/sociology_report_20240903_103808.txt) to see the depth and quality of information Agent Books V1 provides.
+Check out this [example report for Sociology books](./reports/sociology_report_20240903_103808.md) to see the depth and quality of information Agent Books V1 provides.
 
 In each report, you'll find:
 - Detailed book summaries
