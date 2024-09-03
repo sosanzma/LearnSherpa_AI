@@ -1,0 +1,6 @@
+gradio==3.50.2
+crewai==0.10.5
+langchain==0.0.308
+pyyaml==6.0.1
+openai==0.28.1
+anthropic==0.3.11
