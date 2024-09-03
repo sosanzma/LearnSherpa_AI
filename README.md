@@ -1,107 +1,78 @@
-# AI-Powered Book Recommendation System
+# Agent Books V1: Your AI-Powered Book Discovery Assistant
 
-## Overview
+## 📚 Discover Your Next Great Read with Ease
 
-This project is an AI-powered book recommendation system that utilizes a crew of AI agents to search, analyze, and compile book recommendations based on user input. The system focuses on finding books in a specified genre, gathering recommendations from notable figures, and analyzing public opinion.
+Are you tired of endlessly scrolling through book recommendations, unsure which ones are truly worth your time? Enter Agent Books V1 – your personal AI-powered book discovery assistant that curates the best reads tailored to your interests.
 
-## Features
+### 🌟 Why Agent Books V1?
 
-- Search for book recommendations in a specific genre by given people
-- Identify top-rated books based on overall ratings and expert reviews
-- Gather and summarize opinions from Reddit discussions
-- Compile a comprehensive report with book recommendations, reviews, and summaries
-- Generate an interactive infographic of recommended books
+In today's information-rich world, finding the perfect book can feel like searching for a needle in a haystack. Agent Books V1 solves this problem by:
 
-## Project Structure
+- Leveraging AI to analyze thousands of book reviews and ratings
+- Providing in-depth, unbiased summaries from various sources
+- Saving you countless hours of research and indecision
 
-- `main.py`: Entry point for running the crew locally
-- `crew.py`: Defines the AI agents and their tasks
-- `agents.yaml`: Configuration for AI agents
-- `tasks.yaml`: Definition of tasks for the AI agents
-- `tools/`: Contains custom tools used by the agents
-  - `SearchTools.py`: Tool for searching book recommendations
-  - `BookReviewTool.py`: Tool for finding top-rated books and reviews
-  - `RedditOpinionSearch.py`: Tool for gathering opinions from Reddit
+### 🔍 How It Works
 
-## Setup
+Agent Books V1 employs a sophisticated crew of AI agents, each specializing in different aspects of book research:
 
-1. Clone the repository
-2. Install dependencies:
+1. **Best Books Researcher**: Identifies top-rated books in your chosen genre
+2. **Goodreads Searcher**: Gathers and summarizes reviews from avid readers
+3. **Reddit Reviewer**: Finds and analyzes discussions from book communities
+4. **Orchestrator**: Compiles all the information into a comprehensive report
+
+### 🚀 Features
+
+- **Genre-specific recommendations**: Get tailored book suggestions for any genre
+- **Comprehensive reports**: Receive detailed summaries, ratings, and public opinions
+- **Up-to-date information**: Access the latest reviews and discussions
+- **Easy-to-use command-line interface**: Generate reports with a simple command
+- **Direct links to sources**: Each report includes links to Goodreads reviews and Reddit discussions
+
+### 📊 Example Report
+
+Check out this [example report for Sociology books](./reports/sociology_report_20240903_103808.txt) to see the depth and quality of information Agent Books V1 provides.
+
+In each report, you'll find:
+- Detailed book summaries
+- Goodreads ratings and review summaries
+- Reddit discussion highlights
+- Direct links to Goodreads book pages and relevant Reddit threads
+
+These links allow you to dive deeper into specific reviews or join ongoing discussions about the books that interest you most.
+
+### 🛠️ Installation
+
+1. Clone the repository:
    ```
-   pip install -r requirements.txt
+   git clone https://github.com/yourusername/agent-books-v1.git
+   cd agent-books-v1
    ```
-3. Set up environment variables:
-   - Create a `.env` file in the root directory
-   - Add your API keys:
-     ```
-     SERPER_API_KEY=your_serper_api_key
-     OPENAI_API_KEY=your_openai_api_key
-     ```
 
-## Usage
+2. Install dependencies using Poetry:
+   ```
+   poetry install
+   ```
 
-### Running the Crew
+### 📖 Usage
 
-To run the book recommendation system:
-
-```python
-from agent_books_v1.crew import AgentBooksV1Crew
-
-inputs = {
-    'genre': 'neuroscience',
-    'person_1': 'Elon Musk',
-    'person_2': 'Mark Zuckerberg',
-    'person_3': 'Lex Fridman'
-}
-
-AgentBooksV1Crew().crew().kickoff(inputs=inputs)
-```
-
-### Training the Crew
-
-To train the crew for a given number of iterations:
+Generate a book recommendation report for any genre using the following command:
 
 ```
-python main.py train 5 training_results.json
+poetry run agent_books_v1 "Your Genre"
 ```
 
-### Replaying Crew Execution
-
-To replay the crew execution from a specific task:
-
+For example:
 ```
-python main.py replay task_id_here
+poetry run agent_books_v1 "Science Fiction"
 ```
 
-### Testing the Crew
+Your report will be generated and saved in the `reports` directory.
 
-To test the crew execution and get results:
+### 🌈 Experience the Future of Book Discovery
 
-```
-python main.py test 3 gpt-4
-```
+Don't let another great book pass you by. With Agent Books V1, you're always just one command away from your next literary adventure. Start exploring now and transform the way you discover books forever!
 
-## Output
+---
 
-The system generates a comprehensive report saved as `book_recommendations_report.md`, which includes:
-
-- List of recommended books
-- Top-rated books in the specified genre
-- Summaries of Reddit discussions for each book
-- Brief descriptions and ratings
-
-## Visualization
-
-The project includes a React component (`book-infographic.tsx`) that creates an interactive infographic of the recommended books. This component can be integrated into a web application to display the results in a visually appealing manner.
-
-## Customization
-
-You can customize the AI agents and their tasks by modifying the `agents.yaml` and `tasks.yaml` files. Add new tools in the `tools/` directory and update the `crew.py` file to incorporate them into the agent's capabilities.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
+📣 We're constantly improving Agent Books V1. If you have any feedback or suggestions, please open an issue or submit a pull request. Happy reading! 📚

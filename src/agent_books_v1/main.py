@@ -8,13 +8,16 @@ from agent_books_v1.crew import AgentBooksV1Crew
 # crew locally, so refrain from adding necessary logic into this file.
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
+if len(sys.argv) > 1:
+    genre = sys.argv[1]
+else:
+    raise ValueError("No genre provided. Please specify a genre as a command line argument.")
 
 def run():
     """
     Run the crew.
     """
 
-    genre = 'Sociology'
     crew_instance = AgentBooksV1Crew()
     result = crew_instance.crew().kickoff(inputs={
         'genre': genre
@@ -42,7 +45,6 @@ def train():
     """
     Train the crew for a given number of iterations.
     """
-    genre = 'Sociology'
     inputs = {
         "genre": genre
     }
@@ -57,7 +59,7 @@ def replay():
     Replay the crew execution from a specific task.
     """
     try:
-        AgentBooksV1Crew().crew().replay(task_id=sys.argv[1])
+        AgentBooksV1Crew().crew().replay(task_id=sys.argv[1], inputs={"genre": genre})
 
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")
