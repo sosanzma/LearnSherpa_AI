@@ -2,19 +2,19 @@ find_best_books_task:
   description: >
     Identify the best books in the {genre}. Use top-rated lists and expert reviews to find the best books.
   expected_output: >
-    A list of the top 3-5 books with a brief description and ratings.
+    A list of the top 3-5 books with a brief description and ratings. 
 
 gather_goodreads_reviews_task:
   description: >
     Find and summarize opinions from Goodreads reviews on the books provided by agent best_books_researcher. Always include the name of the book, the author, and the Goodreads rating.
   expected_output: >
-    Summaries of Goodreads reviews on each book. 
+    Summaries of Goodreads reviews on each book and the links to the reviews. 
 
 gather_reddit_reviews_task:
   description: >
     Find and summarize opinions from Reddit discussions on the books provided by agent best_books_researcher. Provide the title of the book and the subreddit where the discussion is taking place.
   expected_output: >
-    Summaries of Reddit discussions on each book. Mention the title of the book and the subreddit where the discussion is taking place.
+    Summaries of Reddit discussions on each book and the links to the discussions. Mention the title of the book and the subreddit where the discussion is taking place.
 
 compile_final_report_task:
   description: >
