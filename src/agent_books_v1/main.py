@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+from datetime import datetime
+import os
 import sys
 from agent_books_v1.crew import AgentBooksV1Crew
 
@@ -11,18 +13,38 @@ def run():
     """
     Run the crew.
     """
-    inputs = {
-        'topic': 'AI LLMs'
-    }
-    AgentBooksV1Crew().crew().kickoff(inputs=inputs)
 
+    genre = 'Sociology'
+    crew_instance = AgentBooksV1Crew()
+    result = crew_instance.crew().kickoff(inputs={
+        'genre': genre
+    })
+    print(result)
+    print(type(result))
+
+    # Create a reports directory if it doesn't exist
+    if not os.path.exists('reports'):
+        os.makedirs('reports')
+
+    # Generate a filename based on the genre and current timestamp
+    filename = f"reports/{genre.replace(' ', '_').lower()}_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+
+
+    result_str = str(result)
+
+    # Write the result to a text file
+    with open(filename, 'w') as f:
+        f.write(result_str)
+
+    print(f"Report saved to {filename}")
 
 def train():
     """
     Train the crew for a given number of iterations.
     """
+    genre = 'Sociology'
     inputs = {
-        "topic": "AI LLMs"
+        "genre": genre
     }
     try:
         AgentBooksV1Crew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -44,8 +66,9 @@ def test():
     """
     Test the crew execution and returns the results.
     """
+    genre = 'Sociology'
     inputs = {
-        "topic": "AI LLMs"
+        "genre": genre
     }
     try:
         AgentBooksV1Crew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)

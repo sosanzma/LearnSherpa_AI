@@ -54,7 +54,7 @@ class AgentBooksV1Crew:
             tools=[SerperDevTool()],
             verbose=True,
             allow_delegation=False,
-            llm=self.get_llm('gpt-4o-mini')
+            llm=self.get_llm('gpt-4o')
         )
         
     @agent
@@ -90,7 +90,7 @@ class AgentBooksV1Crew:
             goal=self.agents_config['orchestrator']['goal'],
             backstory=self.agents_config['orchestrator']['backstory'],
             verbose=True,
-            llm=self.get_llm('gpt-4o-mini')
+            llm=self.get_llm('gpt-4o')
         )
 
     @task
