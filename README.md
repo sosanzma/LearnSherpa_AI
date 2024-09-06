@@ -7,7 +7,6 @@ Are you tired of endlessly scrolling through book recommendations, unsure which 
 ### 🌟 Why Learnsherpa_ai?
 
 In today's information-rich world, finding the perfect book can feel like searching for a needle in a haystack. Learnsherpa_ai solves this problem by:
-
 - Leveraging AI to analyze thousands of book reviews and ratings
 - Providing in-depth, unbiased summaries from various sources
 - Saving you countless hours of research and indecision
@@ -15,7 +14,6 @@ In today's information-rich world, finding the perfect book can feel like search
 ### 🔍 How It Works
 
 Learnsherpa_ai employs a sophisticated crew of AI agents, each specializing in different aspects of book research:
-
 1. **Best Books Researcher**: Identifies top-rated books in your chosen genre
 2. **Goodreads Searcher**: Gathers and summarizes reviews from avid readers
 3. **Reddit Reviewer**: Finds and analyzes discussions from book communities
@@ -54,10 +52,18 @@ These links allow you to dive deeper into specific reviews or join ongoing discu
    poetry lock && poetry install
    ```
 
+3. Configure API keys:
+   - Create a `.env` file in the root directory of the project
+   - Add your OpenAI and Serper API keys to the `.env` file:
+     ```
+     OPENAI_API_KEY=your_openai_api_key_here
+     SERPER_API_KEY=your_serper_api_key_here
+     ```
+   Make sure to replace `your_openai_api_key_here` and `your_serper_api_key_here` with your actual API keys.
+
 ### 📖 Usage
 
 Generate a book recommendation report for any genre using the following command:
-
 ```
 poetry run learnsherpa_ai "Your Genre"
 ```
@@ -75,4 +81,4 @@ Don't let another great book pass you by. With Learnsherpa_ai, you're always jus
 
 ---
 
-📣 I'am constantly improving Learnsherpa_ai. If you have any feedback or suggestions, please open an issue or submit a pull request. Happy reading! 📚
+📣 I'm constantly improving Learnsherpa_ai. If you have any feedback or suggestions, please open an issue or submit a pull request. Happy reading! 📚
