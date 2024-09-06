@@ -31,7 +31,7 @@ Learnsherpa_ai employs a sophisticated crew of AI agents, each specializing in d
 
 ### 📊 Example Report
 
-Check out this [example report for Sociology books](./reports/sociology_report_20240903_103808.md) to see the depth and quality of information Learnsherpa_ai provides.
+Check out this [example report for Sociology books](./reports/sociology_report_20240903_103808.md) or the [example report for Productivity books](./reports/productivity_report_20240906_113032.md) to see the depth and quality of information Learnsherpa_ai provides.
 
 In each report, you'll find:
 - Detailed book summaries
