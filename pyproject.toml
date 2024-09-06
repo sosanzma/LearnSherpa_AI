@@ -1,9 +1,8 @@
 [tool.poetry]
-name = "learnsherpa-ai"
+name = "learnsherpa_ai"
 version = "0.1.0"
 description = "LearnSherpa_AI using crewAI"
 authors = ["Manel Soler <you@example.com>"]
-package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.10,<=3.13"
@@ -12,11 +11,10 @@ requests = "^2.31.0"
 python-dotenv = "^1.0.0"
 
 [tool.poetry.scripts]
-learn_sherpa_ai = "src.main:run"
-run_crew = "src.main:run"
-train = "src.main:train"
-replay = "src.main:replay"
-test = "src.main:test"
+learnsherpa_ai = "learnsherpa_ai.main:run"
+train = "learnsherpa_ai.main:train"
+replay = "learnsherpa_ai.main:replay"
+test = "learnsherpa_ai.main:test"
 
 [build-system]
 requires = ["poetry-core"]

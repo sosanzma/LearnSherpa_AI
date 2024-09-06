@@ -2,9 +2,9 @@ import os
 from crewai import Agent, Task, Crew, Process
 from crewai.crews.crew_output import CrewOutput
 from crewai.project import CrewBase, agent, crew, task
-from agent_books_v1.tools.searcher_tool import SearchTools
+from learnsherpa_ai.tools.searcher_tool import SearchTools
 import sys
-sys.path.append('./cursor_agent_books_v1/src')
+sys.path.append('./learnsherpa_ai/src')
 from crewai_tools import SerperDevTool
 
 

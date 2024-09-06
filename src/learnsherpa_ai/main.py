@@ -2,7 +2,7 @@
 from datetime import datetime
 import os
 import sys
-from agent_books_v1.crew import AgentBooksV1Crew
+from learnsherpa_ai.crew import AgentBooksV1Crew
 
 # This main file is intended to be a way for your to run your
 # crew locally, so refrain from adding necessary logic into this file.
