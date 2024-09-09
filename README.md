@@ -11,7 +11,11 @@ In today's information-rich world, finding the perfect book can feel like search
 - Providing in-depth, unbiased summaries from various sources
 - Saving you countless hours of research and indecision
 
+
 ### 🔍 How It Works
+The workflow is illustrated in the following chart:
+
+![Learnsherpa_ai Workflow](img/workflow.png)
 
 Learnsherpa_ai employs a sophisticated crew of AI agents, each specializing in different aspects of book research:
 1. **Best Books Researcher**: Identifies top-rated books in your chosen genre
