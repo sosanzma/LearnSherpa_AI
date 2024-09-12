@@ -13,11 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 import yaml
 
-# Counter for unique report naming
 
-
-# Uncomment the following line to use an example of a custom tool
-# from agent_books_v1.tools.custom_tool import MyCustomTool
 
 # Check our tools documentations for more information on how to use them
 # from crewai_tools import SerperDevTool
@@ -29,7 +25,6 @@ class AgentBooksV1Crew:
         base_path = os.path.dirname(os.path.abspath(__file__))
         self.agents_config = self.load_config(os.path.join(base_path, 'config', 'agents.yaml'))
         self.tasks_config = self.load_config(os.path.join(base_path, 'config', 'tasks.yaml'))
-        self.report_counter = 1
 
     def load_config(self, path):
         with open(path, 'r') as file:
