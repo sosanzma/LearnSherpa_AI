@@ -22,6 +22,7 @@ def run():
     result = crew_instance.crew().kickoff(inputs={
         'genre': genre
     })
+    crew_instance.save_reports(result)
     print(result)
     print(type(result))
 
