@@ -7,8 +7,8 @@ authors = ["Manel Soler <you@example.com>"]
 [tool.poetry.dependencies]
 python = ">=3.10,<=3.13"
 crewai = { extras = ["tools"], version = "^0.51.0" }
-requests = "^2.31.0"
 python-dotenv = "^1.0.0"
+chainlit = "^0.7.0"
 
 [tool.poetry.scripts]
 learnsherpa_ai = "learnsherpa_ai.main:run"
