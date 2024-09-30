@@ -40,7 +40,7 @@
 - **Summary**: Goffman uses the analogy of theatre to explain social behavior, making it both fascinating and insightful. His engaging writing style keeps discussions relevant and relatable.
   - **Pros**:
     - Insightful exploration of social interactions, likening them to theatrical performances.
-    - Goffman’s engaging writing style keeps discussions relevant and relatable.
+    - Goffmanâ€™s engaging writing style keeps discussions relevant and relatable.
   - **Cons**:
     - Can be too abstract and lacks practical applications.
     - Examples presented may be dated.
@@ -48,10 +48,10 @@
 
 **Public Opinions (Reddit)**:
 - **Positive Feedback**:
-  - "Goffman’s insights into social interactions helped me understand the complexities of identity and performance in daily life."
+  - "Goffmanâ€™s insights into social interactions helped me understand the complexities of identity and performance in daily life."
   - "This book reshaped my understanding of social roles and how we all perform in different contexts."
 - **Negative Feedback**:
-  - "I struggled with the abstract nature of his arguments—it's not an easy read."
+  - "I struggled with the abstract nature of his argumentsâ€”it's not an easy read."
   - "Goffman's view can sometimes negate the authenticity of human interactions."
 - **Insightful Comments**:
   - "Goffman's work is essential for anyone studying social interaction; it reveals how much we curate our identities in everyday situations." ([Link](https://www.reddit.com/r/VeryBadWizards/comments/1245d6r/topic_request_erving_goffman_the_presentation_of/))
@@ -65,7 +65,7 @@
 - **Goodreads Rating**: 4.54 (19,456 ratings)
 
 **Detailed Summary**:
-- **Summary**: Wilkerson’s narrative style is engaging, making complex social structures accessible and compelling. The book draws impactful parallels between caste systems in America, India, and Nazi Germany, prompting deep reflection.
+- **Summary**: Wilkersonâ€™s narrative style is engaging, making complex social structures accessible and compelling. The book draws impactful parallels between caste systems in America, India, and Nazi Germany, prompting deep reflection.
   - **Pros**:
     - Engaging narrative style making complex social structures accessible.
     - Draws impactful parallels between caste systems in America, India, and Nazi Germany.
@@ -76,11 +76,11 @@
 
 **Public Opinions (Reddit)**:
 - **Positive Feedback**:
-  - "Wilkerson’s exploration of systemic oppression is crucial for understanding race in America."
+  - "Wilkersonâ€™s exploration of systemic oppression is crucial for understanding race in America."
   - "This book is beautifully written and deeply impactful, shedding light on a topic that needs more attention."
 - **Negative Feedback**:
   - "It felt a bit long-winded in parts, which made it hard to maintain focus."
-  - "The comparisons to India’s caste system were sometimes oversimplified."
+  - "The comparisons to Indiaâ€™s caste system were sometimes oversimplified."
 - **Insightful Comments**:
   - "Wilkerson does an excellent job of connecting historical context with current societal structures, making it relevant and urgent." ([Link](https://www.reddit.com/r/books/comments/kii0c0/what_do_people_think_about_isabel_wilkersons/))
 
@@ -93,7 +93,7 @@
 - **Goodreads Rating**: 4.12 (1,502 ratings)
 
 **Detailed Summary**:
-- **Summary**: Recognized as a foundational text in sociology, Weber’s analytical approach offers a robust framework for understanding economic and social interactions.
+- **Summary**: Recognized as a foundational text in sociology, Weberâ€™s analytical approach offers a robust framework for understanding economic and social interactions.
   - **Pros**:
     - Comprehensive insights into social structures and relationships.
     - Analytical approach provides a robust framework for understanding economic and social interactions.
@@ -104,13 +104,13 @@
 
 **Public Opinions (Reddit)**:
 - **Positive Feedback**:
-  - "Weber’s insights into bureaucracy and social action are incredibly relevant today."
-  - "It’s a challenging read, but the concepts are foundational for understanding modern sociology."
+  - "Weberâ€™s insights into bureaucracy and social action are incredibly relevant today."
+  - "Itâ€™s a challenging read, but the concepts are foundational for understanding modern sociology."
 - **Negative Feedback**:
   - "The writing is dense, and it can feel like a chore to get through."
   - "Weber's theories can be abstract and sometimes hard to apply in real-world contexts."
 - **Insightful Comments**:
-  - "Weber's work is essential for anyone studying sociology or organizational theory—the depth of his analysis is unmatched." ([Link](https://www.reddit.com/r/sociology/comments/16ok9oi/is_max_webers_economy_and_society_worth_reading/))
+  - "Weber's work is essential for anyone studying sociology or organizational theoryâ€”the depth of his analysis is unmatched." ([Link](https://www.reddit.com/r/sociology/comments/16ok9oi/is_max_webers_economy_and_society_worth_reading/))
 
 ---
 
@@ -135,18 +135,12 @@
   - "It fundamentally changed how I perceive social knowledge and reality."
   - "The way Berger and Luckmann articulate the processes of social construction is enlightening."
 - **Negative Feedback**:
-  - "It’s great in theory, but I found it hard to relate to practical examples."
+  - "Itâ€™s great in theory, but I found it hard to relate to practical examples."
   - "The concepts can feel abstract and detached from everyday experiences."
 - **Insightful Comments**:
-  - "This book is crucial for understanding how our perceptions of reality are shaped by social processes—it's a must-read in sociology." ([Link](https://www.reddit.com/r/sociology/comments/195ynuy/recently_reread_the_social_construction_of/))
+  - "This book is crucial for understanding how our perceptions of reality are shaped by social processesâ€”it's a must-read in sociology." ([Link](https://www.reddit.com/r/sociology/comments/195ynuy/recently_reread_the_social_construction_of/))
 
----
 
-### Conclusion
-
-This report provides a comprehensive overview of five influential sociological books, including detailed summaries, Goodreads ratings, and balanced public opinions from Reddit discussions. Each book is critically analyzed to capture its essence, strengths, and areas for improvement, providing a nuanced understanding for readers and researchers alike.
-
-Sources:
 - Goodreads reviews and ratings
 - Reddit discussions and comments
 
