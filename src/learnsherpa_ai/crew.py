@@ -32,7 +32,7 @@ class AgentBooksV1Crew:
 
     def get_llm(self, model_name):
         """Helper method to get the LLM based on the model name"""
-        if model_name.startswith('gpt'):
+        if model_name.startswith('gpt') or model_name.startswith('o1'):
             from langchain.chat_models import ChatOpenAI
             return ChatOpenAI(model_name=model_name)
         elif model_name.startswith('claude'):
@@ -49,9 +49,9 @@ class AgentBooksV1Crew:
             goal=self.agents_config['best_books_researcher']['goal'],
             backstory=self.agents_config['best_books_researcher']['backstory'],
             tools=[SerperDevTool()],
-            verbose=False,
+            verbose=True,
             allow_delegation=False,
-            llm=self.get_llm('gpt-4o-2024-08-06')
+            llm=self.get_llm('gpt-4o-mini')
         )
         
     @agent
@@ -62,8 +62,8 @@ class AgentBooksV1Crew:
             goal=self.agents_config['searcher_goodreads']['goal'],
             backstory=self.agents_config['searcher_goodreads']['backstory'],
             tools=[SerperDevTool()],
-            verbose=False,
-            llm=self.get_llm('gpt-4o-2024-08-06')
+            verbose=True,
+            llm=self.get_llm('gpt-4o-mini')
         )
     
     @agent
@@ -74,7 +74,7 @@ class AgentBooksV1Crew:
             goal=self.agents_config['reddit_reviewer']['goal'],
             backstory=self.agents_config['reddit_reviewer']['backstory'],
             tools=[SerperDevTool()],
-            verbose=False,
+            verbose=True,
             llm=self.get_llm('gpt-4o-mini')
         )
 
@@ -85,7 +85,7 @@ class AgentBooksV1Crew:
             role=self.agents_config['orchestrator']['role'],
             goal=self.agents_config['orchestrator']['goal'],
             backstory=self.agents_config['orchestrator']['backstory'],
-            verbose=False,
+            verbose=True,
             llm=self.get_llm('gpt-4o-mini')
         )
 

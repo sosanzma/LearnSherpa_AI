@@ -13,7 +13,7 @@ if len(sys.argv) > 1:
 else:
     raise ValueError("No genre provided. Please specify a genre as a command line argument.")
 
-def run():
+def run():  
     """
     Run the crew.
     """
@@ -78,3 +78,38 @@ def test():
 
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")
+
+
+
+def run_crew(crew_instance, genre):
+    """
+    Run the crew and save the report.
+    """
+    result = crew_instance.crew().kickoff(inputs={'genre': genre})
+    crew_instance.save_reports(result)
+
+    # Create a reports directory if it doesn't exist
+    if not os.path.exists('reports'):
+        os.makedirs('reports')
+
+    # Generate a filename based on the genre and current timestamp
+    filename = f"reports/{genre.replace(' ', '_').lower()}_report_latest.txt"
+
+    result_str = str(result)
+
+    # Write the result to a text file
+    with open(filename, 'w') as f:
+        f.write(result_str)
+
+    print(f"Report saved to {filename}")
+    return filename
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 1:
+        genre = sys.argv[1]
+    else:
+        raise ValueError("No genre provided. Please specify a genre as a command line argument.")
+    
+    crew_instance = AgentBooksV1Crew()
+    run_crew(crew_instance, genre)
