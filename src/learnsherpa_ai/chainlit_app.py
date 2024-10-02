@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Add the parent directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import chainlit as cl
 from learnsherpa_ai.crew import AgentBooksV1Crew
 from learnsherpa_ai.main import run_crew

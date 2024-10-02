@@ -49,9 +49,9 @@ class AgentBooksV1Crew:
             goal=self.agents_config['best_books_researcher']['goal'],
             backstory=self.agents_config['best_books_researcher']['backstory'],
             tools=[SerperDevTool()],
-            verbose=True,
+            verbose=False,
             allow_delegation=False,
-            llm=self.get_llm('gpt-4o-mini')
+            llm=self.get_llm('gpt-4o-2024-08-06')
         )
         
     @agent
@@ -62,7 +62,7 @@ class AgentBooksV1Crew:
             goal=self.agents_config['searcher_goodreads']['goal'],
             backstory=self.agents_config['searcher_goodreads']['backstory'],
             tools=[SerperDevTool()],
-            verbose=True,
+            verbose=False,
             llm=self.get_llm('gpt-4o-mini')
         )
     
@@ -74,7 +74,7 @@ class AgentBooksV1Crew:
             goal=self.agents_config['reddit_reviewer']['goal'],
             backstory=self.agents_config['reddit_reviewer']['backstory'],
             tools=[SerperDevTool()],
-            verbose=True,
+            verbose=False,
             llm=self.get_llm('gpt-4o-mini')
         )
 
@@ -85,7 +85,7 @@ class AgentBooksV1Crew:
             role=self.agents_config['orchestrator']['role'],
             goal=self.agents_config['orchestrator']['goal'],
             backstory=self.agents_config['orchestrator']['backstory'],
-            verbose=True,
+            verbose=False,
             llm=self.get_llm('gpt-4o-mini')
         )
 
