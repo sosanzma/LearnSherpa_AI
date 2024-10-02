@@ -38,20 +38,21 @@ class VectorDB:
 
     def process_goodreads_report(self, content: str) -> List[Dict]:
         chunks = []
-        book_entries = re.split(r'\d+\.\s+\*\*', content)[1:]  # Split by numbered book entries
+        # Split based on '**Book:'
+        book_entries = re.split(r'\*\*Book:', content)[1:]  # Skip the first empty split
         
         for entry in book_entries:
-            title_match = re.match(r'(.*?)\*\*', entry)
+            title_match = re.match(r'(.*?)\*\*', entry.strip())  # Match until next '**'
             if title_match:
                 title = title_match.group(1).strip()
                 rating_match = re.search(r'\*\*Goodreads Rating\*\*:\s+([\d.]+)/5', entry)
-                link_match = re.search(r'\*\*Link to Reviews\*\*:\s+\[(.*?)\]\((https?://.*?)\)', entry)
+                link_match = re.search(r'\[.*?\]\((https?://.*?)\)', entry)
                 
                 metadata = {
                     "source": "goodreads",
                     "title": title,
                     "rating": rating_match.group(1) if rating_match else None,
-                    "link": link_match.group(2) if link_match else None
+                    "link": link_match.group(1) if link_match else None
                 }
                 
                 # Use the text splitter to split the entry into smaller chunks
@@ -61,20 +62,26 @@ class VectorDB:
         
         return chunks
 
+
     def process_reddit_report(self, content: str) -> List[Dict]:
         chunks = []
-        book_entries = re.split(r'###\s+\d+\.\s+\*\*', content)[1:]  # Split by numbered book entries
+        # Split by the numbered entries like '1. **"Book Title"'
+        book_entries = re.split(r'\d+\.\s+\*\*', content)[1:]  # Skip the first empty split
         
         for entry in book_entries:
-            title_match = re.match(r'(.*?)\*\*', entry)
+            # Match the book title within quotes
+            title_match = re.match(r'"(.*?)"\s+by\s+(.*?)\*\*', entry.strip())
             if title_match:
                 title = title_match.group(1).strip()
-                subreddit_links = re.findall(r'- \*\*Subreddit\*\*:\s+r/(\w+)\s+\[Discussion Link\]\((https?://.*?)\)', entry)
+                author = title_match.group(2).strip()
+                
+                # Extract Reddit discussion links
+                subreddit_links = re.findall(r'- \[(.*?)\]\((https?://.*?)\)', entry)
                 
                 metadata = {
                     "source": "reddit",
                     "title": title,
-                    "subreddits": [subreddit for subreddit, _ in subreddit_links],
+                    "author": author,
                     "links": [link for _, link in subreddit_links]
                 }
                 
@@ -84,6 +91,7 @@ class VectorDB:
                     chunks.append({"text": chunk, "metadata": metadata})
         
         return chunks
+
 
     def add_reports(self, reports: Dict[str, str]):
         for report_type, content in reports.items():
