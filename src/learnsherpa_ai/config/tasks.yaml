@@ -3,18 +3,29 @@ find_best_books_task:
     Identify the best books in the {genre}. Use top-rated lists and expert reviews to find the best books.
   expected_output: >
     A list of the top 3-5 books with a brief description and ratings. 
-
 gather_goodreads_reviews_task:
   description: >
-    Find and summarize opinions from Goodreads reviews on the books provided by agent best_books_researcher. Always include the name of the book, the author, and the Goodreads rating.
+    Find and summarize opinions from Goodreads reviews on the books provided by agent best_books_researcher. Present a report that explains the pros and cons of the book according to the users. Always include the name of the book, the author, and the Goodreads rating.
   expected_output: >
-    Summaries of Goodreads reviews on each book and the links to the reviews. 
+    #### [Index]. **"[Book Title]" by [Author]**
+      - **Link:** [Goodreads Reviews Link]
+      - **Goodreads Rating:** [Rating]/5
+      - **Summary:**
+        - [Summary Point 1]
+        - [Summary Point 2]
+        - [Summary Point 3]
 
 gather_reddit_reviews_task:
   description: >
-    Find and summarize opinions from Reddit discussions on the books provided by agent best_books_researcher. Provide the title of the book and the subreddit where the discussion is taking place.
+    Find and summarize opinions from Reddit discussions on the books provided by agent best_books_researcher. Provide the title of the book, a summary of the topic discussed, and the subreddit where the discussion is taking place.
   expected_output: >
-    Summaries of Reddit discussions on each book and the links to the discussions. Mention the title of the book and the subreddit where the discussion is taking place.
+    #### [Index]. **"[Book Title]" by [Author]**
+      - **Subreddit:** r/[Subreddit]
+      - **Link:** [Discussion Link]
+      - **Summary:**
+        - [Discussion Point 1]
+        - [Discussion Point 2]
+        - [Discussion Point 3]
 
 compile_final_report_task:
   description: >
