@@ -3,7 +3,7 @@ from learnsherpa_ai.main import run as generate_report
 from rag_reports.chat_interface import BookChatInterface
 from rag_reports.populate_db import populate_database
 from learnsherpa_ai.crew import AgentBooksV1Crew
-from learnsherpa_ai.main import run_crew
+from learnsherpa_ai.main import run
 import asyncio
 import os
 
@@ -14,13 +14,7 @@ report_file = None
 
 @cl.on_chat_start
 async def start():
-    global crew_instance
-    # Initialize crew instance
-    crew_instance = cl.user_session.get("crew_instance", None)
-    if not crew_instance:
-        crew_instance = AgentBooksV1Crew()
-        cl.user_session.set("crew_instance", crew_instance)
-
+  # Initialize crew instance
     # Welcome message
     welcome_message = """
     Welcome to the Book Recommendation System!
@@ -47,7 +41,7 @@ async def main(message: cl.Message):
         
 
         try:
-            crew_task = asyncio.create_task(cl.make_async(run_crew)(crew_instance, genre))
+            crew_task = asyncio.create_task(cl.make_async(run)(genre))
 
             update_messages = [
                 ("The best_books_researcher agent is finding the best books...", 30),
