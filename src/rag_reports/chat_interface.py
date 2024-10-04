@@ -7,7 +7,7 @@ from typing import Dict, List
 class BookChatInterface:
     def __init__(self, database_name):
         self.vector_db = VectorDB(database_name)
-        self.llm = ChatOpenAI(model_name="gpt-4o-2024-08-06", temperature=0)
+        self.llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
         
         # Define an improved prompt template
         template = """Given the following extracted parts of a long document and a question, create a final answer with references.
@@ -24,13 +24,14 @@ class BookChatInterface:
         Answer: [Your detailed answer based on the relevant information]
         Sources: [List of book titles and sources used]
 
+
         QUESTION: {question}
         =========
         {summaries}
         =========
         FINAL ANSWER:"""
 
-        PROMPT = PromptTemplate(template=template, input_variables=["summaries", "question"])
+        PROMPT = PromptTemplate(template=template, input_variables=["summaries" , "question"])
         
         self.chain = RetrievalQAWithSourcesChain.from_chain_type(
             llm=self.llm,
@@ -42,9 +43,9 @@ class BookChatInterface:
 
     def get_response(self, question: str) -> Dict[str, str]:
         response = self.chain({"question": question})
-        
+        print("1", response)
         answer = response['answer'].strip()
-        
+        print("2", answer)
         # Check if the answer indicates lack of knowledge
         if answer.lower().startswith("i don't know") or answer.lower() == "i don't know.":
             return {
@@ -57,7 +58,7 @@ class BookChatInterface:
             for doc in response['source_documents']:
                 metadata = doc.metadata
                 if metadata['source'] == 'reddit':
-                    sources.extend(metadata.get('links', []))
+                    sources.extend(metadata.get('link', []))
                 else:  # assuming this is 'goodreads'
                     link = metadata.get('link')
                     if link:
