@@ -7,7 +7,7 @@ from typing import Dict, List
 class BookChatInterface:
     def __init__(self, database_name):
         self.vector_db = VectorDB(database_name)
-        self.llm = ChatOpenAI(model_name="gpt-4-0613", temperature=0)
+        self.llm = ChatOpenAI(model_name="gpt-4o-2024-08-06", temperature=0)
         
         # Define an improved prompt template
         template = """Given the following extracted parts of a long document and a question, create a final answer with references.
