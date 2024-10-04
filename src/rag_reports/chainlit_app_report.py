@@ -16,7 +16,6 @@ async def main(message: cl.Message):
 
     try:
         response = chat_interface.get_response(message.content)
-        print(response)
         await process_response(response)
     except Exception as e:
         await cl.Message(content=f"An error occurred: {str(e)}").send()
