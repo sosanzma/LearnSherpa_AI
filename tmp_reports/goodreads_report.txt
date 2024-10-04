@@ -1,68 +1,39 @@
-Here is a report of Goodreads reviews for each of the provided psychology books, including links to the reviews and summaries highlighting pros and cons:
+#### 1. **"The Psychology of Money" by Morgan Housel**
+  - **Link:** [Goodreads Reviews Link](https://www.goodreads.com/book/show/41881472-the-psychology-of-money)
+  - **Goodreads Rating:** 4.30/5
+  - **Summary:**
+    - The book offers insightful lessons on the behavioral aspects of money, emphasizing that financial success is more about how you think and behave than how much you know.
+    - Pros include its engaging storytelling, using real-life examples to illustrate the psychological factors influencing financial decisions.
+    - Some readers feel it lacks depth in certain areas, providing more of a broad overview rather than in-depth analysis.
 
-1. **"Thinking, Fast and Slow" by Daniel Kahneman**  
-   - **Goodreads Rating**: 4.18/5 (based on 511,473 ratings and 17,334 reviews)
-   - **Link to Reviews**: [Goodreads Reviews for Thinking, Fast and Slow](https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow)
+#### 2. **"Rich Dad Poor Dad" by Robert T. Kiyosaki**
+  - **Link:** [Goodreads Reviews Link](https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad)
+  - **Goodreads Rating:** 4.13/5
+  - **Summary:**
+    - The book is praised for its clear explanation of financial principles and the contrast between different financial mindsets, making it a good starting point for financial literacy.
+    - Many appreciate the personal anecdotes and straightforward advice on building wealth.
+    - Critics argue that it sometimes oversimplifies and lacks actionable advice for achieving financial independence.
 
-**Summary of Goodreads Reviews:**
-- **Pros:**
-  - Insightful content on the dual systems of thought.
-  - Well-researched with substantial psychological insights.
-  - Impactful in changing perceptions of thinking and decision-making.
-- **Cons:**
-  - Dense material, requiring careful reading.
-  - Complex language may be challenging for casual readers.
+#### 3. **"I Will Teach You to Be Rich" by Ramit Sethi**
+  - **Link:** [Goodreads Reviews Link](https://www.goodreads.com/book/show/6150540-i-will-teach-you-to-be-rich)
+  - **Goodreads Rating:** 4.12/5
+  - **Summary:**
+    - Readers commend its practical approach to personal finance, providing young adults with a step-by-step guide on saving, budgeting, and investing.
+    - It is noted for its conversational tone and actionable tips, making financial management approachable.
+    - Some users find the advice too basic or targeted towards a specific audience, suggesting it might not be as beneficial for those already knowledgeable about finance.
 
-2. **"The Power of Habit: Why We Do What We Do in Life and Business" by Charles Duhigg**  
-   - **Goodreads Rating**: 4.13/5 (based on 520,219 ratings and 23,030 reviews)
-   - **Link to Reviews**: [Goodreads Reviews for The Power of Habit](https://www.goodreads.com/book/show/12609433-the-power-of-habit)
+#### 4. **"The Intelligent Investor" by Benjamin Graham**
+  - **Link:** [Goodreads Reviews Link](https://www.goodreads.com/book/show/106835.The_Intelligent_Investor)
+  - **Goodreads Rating:** 4.21/5
+  - **Summary:**
+    - The book is highly regarded for its comprehensive guide to value investing, providing timeless principles for long-term investment success.
+    - Its in-depth analysis and focus on fundamentals make it a valuable resource for serious investors.
+    - Some readers find it dense and challenging, requiring a strong interest in the subject to fully appreciate its content.
 
-**Summary of Goodreads Reviews:**
-- **Pros:**
-  - Practical insights into habit formation and change.
-  - Engaging storytelling that simplifies complex concepts.
-  - Motivational framework for altering habits.
-- **Cons:**
-  - Repetitive content, lacking conciseness.
-  - Limited depth in scientific exploration of habits.
-
-3. **"Predictably Irrational: The Hidden Forces That Shape Our Decisions" by Dan Ariely**  
-   - **Goodreads Rating**: 4.12/5 (based on 125,651 ratings and 6,790 reviews)
-   - **Link to Reviews**: [Goodreads Reviews for Predictably Irrational](https://www.goodreads.com/book/show/1713426.Predictably_Irrational)
-
-**Summary of Goodreads Reviews:**
-- **Pros:**
-  - Eye-opening insights into irrational human behavior.
-  - Accessible writing style for a broad audience.
-  - Relatable examples and experiments.
-- **Cons:**
-  - Repetitive themes across chapters.
-  - Limited depth in psychological analysis.
-
-4. **"Influence: The Psychology of Persuasion" by Robert B. Cialdini**  
-   - **Goodreads Rating**: 4.22/5 (based on 159,356 ratings and 5,775 reviews)
-   - **Link to Reviews**: [Goodreads Reviews for Influence: The Psychology of Persuasion](https://www.goodreads.com/book/show/28815.Influence)
-
-**Summary of Goodreads Reviews:**
-- **Pros:**
-  - Comprehensive analysis of persuasion techniques.
-  - Practical applications in various real-world scenarios.
-  - Engaging and informative content.
-- **Cons:**
-  - Dated examples may limit current relevance.
-  - Repetitive concepts throughout the book.
-
-5. **"Mistakes Were Made (But Not by Me): Why We Justify Foolish Beliefs, Bad Decisions, and Hurtful Acts" by Carol Tavris and Elliot Aronson**  
-   - **Goodreads Rating**: 4.12/5 (based on 15,839 ratings and 1,406 reviews)
-   - **Link to Reviews**: [Goodreads Reviews for Mistakes Were Made (But Not by Me)](https://www.goodreads.com/book/show/522525.Mistakes_Were_Made_but_Not_by_Me)
-
-**Summary of Goodreads Reviews:**
-- **Pros:**
-  - Compelling analysis of cognitive dissonance and self-justification.
-  - Relevant to contemporary issues and personal introspection.
-  - Engaging narrative with relatable examples.
-- **Cons:**
-  - Some readers find the content unsettling as it challenges personal biases.
-  - Could be dense for those unfamiliar with psychological concepts.
-
-These summaries provide a balanced view of each book, considering both positive and negative aspects as highlighted by readers on Goodreads.
+#### 5. **"Broke Millennial" by Erin Lowry**
+  - **Link:** [Goodreads Reviews Link](https://www.goodreads.com/book/show/30257963-broke-millennial)
+  - **Goodreads Rating:** 4.05/5
+  - **Summary:**
+    - The book is praised for its relatability and humor, offering millennials practical advice on managing personal finances and tackling common challenges like student loans.
+    - Its approachable style and real-life examples make complex financial concepts more accessible.
+    - Critics mention that some advice may be too simplistic and not comprehensive enough for those seeking in-depth financial strategies.

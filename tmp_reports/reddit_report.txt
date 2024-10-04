@@ -1,54 +1,89 @@
-### 1. **"Thinking, Fast and Slow" by Daniel Kahneman**
-- **Subreddit**: r/AcademicPsychology  
-  [Discussion Link](https://www.reddit.com/r/AcademicPsychology/comments/se2048/is_thinking_fast_and_slow_worth_reading_and_if_so/)
-  - Users discuss the book as foundational in cognitive psychology, emphasizing its relevance in moral judgment and decision-making.
-  
-- **Subreddit**: r/bookclub  
-  [Discussion Link](https://www.reddit.com/r/bookclub/comments/1c50qkz/schedule_thinking_fast_and_slow_by_daniel_kahneman/)
-  - Engaging conversations about intuitive vs. analytical thinking, with readers reflecting on personal insights from the text.
+#### [1]. **"The Psychology of Money" by Morgan Housel**
+  - **Subreddit:** r/coolguides
+  - **Link:** [Discussion Link](https://www.reddit.com/r/coolguides/comments/1baen59/a_cool_guide_summary_to_the_psychology_of_money/)
+  - **Summary:**
+    - Discusses the importance of saving rate versus income level, emphasizing that simply earning a high salary does not lead to wealth if one spends it all.
+    - Highlights the psychological aspects of financial decision-making that the book addresses.
+    - User comments reflect varied interpretations, with some sharing personal anecdotes about their financial behaviors.
 
-- **Subreddit**: r/books  
-  [Discussion Link](https://www.reddit.com/r/books/comments/m4rvae/thinking_fast_and_slow_is_an_absolute_gem/)
-  - Praised as an "absolute gem," many users express how Kahneman's research has profoundly impacted their understanding of human cognition.
+#### [2]. **"The Psychology of Money" by Morgan Housel**
+  - **Subreddit:** r/books
+  - **Link:** [Discussion Link](https://www.reddit.com/r/books/comments/10f7sr1/key_take_aways_from_the_book_the_psychology_of/)
+  - **Summary:**
+    - Key takeaways from the book, emphasizing that financial success is more about behavior than intelligence.
+    - Users discuss how the book reshaped their understanding of wealth and financial independence.
+    - Many commenters share their personal experiences in relation to the lessons learned from the book.
 
-### 2. **"The Power of Habit: Why We Do What We Do in Life and Business" by Charles Duhigg**
-- **Subreddit**: r/BettermentBookClub  
-  [Discussion Link](https://www.reddit.com/r/BettermentBookClub/comments/iqokbk/how_the_power_of_habit_by_charles_duhigg_helped/)
-  - Users share personal transformations facilitated by the book, comparing it with other habit-forming literature like "Atomic Habits."
+#### [3]. **"The Psychology of Money" by Morgan Housel**
+  - **Subreddit:** r/BettermentBookClub
+  - **Link:** [Discussion Link](https://www.reddit.com/r/BettermentBookClub/comments/pl7tvw/my_thoughts_highlights_on_the_psychology_of_money/)
+  - **Summary:**
+    - Focuses on the difference between wanting to appear wealthy versus actually being wealthy.
+    - Users discuss various highlights from the book, including lessons on humility and the true nature of wealth.
+    - Offers a mix of praise and critiques on how relatable and actionable the ideas are.
 
-- **Subreddit**: r/productivity  
-  [Discussion Link](https://www.reddit.com/r/productivity/comments/axzyan/i_made_this_animated_summary_of_the_power_of/)
-  - Animated summaries and discussions highlight practical applications of Duhigg's theories in daily life and productivity enhancements.
+#### [4]. **"The Psychology of Money" by Morgan Housel**
+  - **Subreddit:** r/swingtrading
+  - **Link:** [Discussion Link](https://www.reddit.com/r/swingtrading/comments/1f7ewq9/september_book_of_the_month_club_the_psychology/)
+  - **Summary:**
+    - Members discuss the book as a recommended read for understanding personal finance and investing behavior.
+    - Comments reflect on how the 19 stories resonate with their own financial journeys.
+    - Users note the blend of storytelling and practical advice as a key strength of the book.
 
-- **Subreddit**: r/getdisciplined  
-  [Discussion Link](https://www.reddit.com/r/getdisciplined/comments/435hjv/discussion_book_report_the_power_of_habit/)
-  - In-depth discussions on the cue-routine-reward loop, with users sharing how they have implemented the concepts to form better habits.
+#### [5]. **"Rich Dad Poor Dad" by Robert T. Kiyosaki**
+  - **Subreddit:** r/FluentInFinance
+  - **Link:** [Discussion Link](https://www.reddit.com/r/FluentInFinance/comments/1e6icwr/rich_dad_poor_dad_is_a_terrible_personal_finance/)
+  - **Summary:**
+    - The discussion begins with praise for the mindset shift the book offers, particularly regarding financial independence.
+    - Several users acknowledge the book's motivational aspects while criticizing its practical financial advice, describing it as vague.
+    - Contrasting opinions emerge about Kiyosaki's credibility, with some questioning the authenticity of the "Rich Dad" narrative.
 
-### 3. **"Predictably Irrational: The Hidden Forces That Shape Our Decisions" by Dan Ariely**
-- **Subreddit**: r/books  
-  [Discussion Link](https://www.reddit.com/r/books/comments/g45ur8/just_finished_predictably_irrational_by_dan_ariely/)
-  - Readers discuss Ariely's insights into irrational behavior, with many sharing specific examples that resonate with their own experiences.
+#### [6]. **"Rich Dad Poor Dad" by Robert T. Kiyosaki**
+  - **Subreddit:** r/Entrepreneur
+  - **Link:** [Discussion Link](https://www.reddit.com/r/Entrepreneur/comments/16im1kk/is_the_book_rich_dad_poor_dad_by_robert_kiyosaki/)
+  - **Summary:**
+    - Users discuss the importance of the principles laid out in the book, especially regarding cash flow and asset ownership.
+    - Some see it as a crucial read for anyone wanting to shift their understanding of wealth-building.
+    - The conversation reflects mixed feelings about Kiyosaki's personal financial history and its impact on the book's message.
 
-- **Subreddit**: r/IAmA  
-  [Discussion Link](https://www.reddit.com/r/IAmA/comments/21ri9r/im_social_scientist_and_author_dan_ariely_i_study/)
-  - Dan Ariely himself engages with readers, providing additional context to his work and discussing the implications of his findings.
+#### [7]. **"I Will Teach You to Be Rich" by Ramit Sethi**
+  - **Subreddit:** r/DaveRamsey
+  - **Link:** [Discussion Link](https://www.reddit.com/r/DaveRamsey/comments/1arj53b/i_will_teach_you_to_be_rich_by_ramit_sethithoughts/)
+  - **Summary:**
+    - Users highlight the book's focus on increasing income rather than extreme frugality, emphasizing practical strategies for financial growth.
+    - The book is described as straightforward and user-friendly, making it suitable for those new to personal finance.
+    - Some commenters appreciate the actionable advice, while others find it lacking depth in certain areas.
 
-### 4. **"Influence: The Psychology of Persuasion" by Robert B. Cialdini**
-- **Subreddit**: r/startups  
-  [Discussion Link](https://www.reddit.com/r/startups/comments/63kmed/influence_the_psychology_of_persuasion_book_review/)
-  - Users highlight practical applications in business, discussing how understanding persuasion can enhance marketing efforts.
+#### [8]. **"I Will Teach You to Be Rich" by Ramit Sethi**
+  - **Subreddit:** r/personalfinance
+  - **Link:** [Discussion Link](https://www.reddit.com/r/personalfinance/comments/eenail/i_will_teach_you_to_be_rich_book_is_it_good/)
+  - **Summary:**
+    - The discussion characterizes the book as a good introduction to managing finances, especially for young adults.
+    - Users praise its engaging writing style but note that some concepts can feel repetitive.
+    - Many agree that the book's straightforward approach makes it accessible and practical for readers.
 
-- **Subreddit**: r/sales  
-  [Discussion Link](https://www.reddit.com/r/sales/comments/hcc6rx/has_anyone_been_using_the_techniques_described_in/)
-  - A conversation about the application of Cialdini's principles in sales strategies, with many sharing successful experiences.
+#### [9]. **"The Intelligent Investor" by Benjamin Graham**
+  - **Subreddit:** r/ValueInvesting
+  - **Link:** [Discussion Link](https://www.reddit.com/r/ValueInvesting/comments/19aekzx/would_the_intelligent_investor_by_benjamin_graham/)
+  - **Summary:**
+    - Users discuss the book's effective methods for investing and understanding market psychology.
+    - The consensus is that the book remains relevant for its foundational principles of value investing.
+    - Many comments reflect on Graham's enduring influence on modern investing strategies.
 
-### 5. **"Mistakes Were Made (But Not by Me)" by Carol Tavris and Elliot Aronson**
-- **Subreddit**: r/BettermentBookClub  
-  [Discussion Link](https://www.reddit.com/r/BettermentBookClub/comments/5vpkgh/just_finished_mistakes_were_made_but_not_by_me/)
-  - Readers reflect on cognitive dissonance and self-justification, sharing personal anecdotes related to the themes discussed in the book.
+#### [10]. **"The Intelligent Investor" by Benjamin Graham**
+  - **Subreddit:** r/investing
+  - **Link:** [Discussion Link](https://www.reddit.com/r/investing/comments/13yvh6d/is_the_intelligent_investor_by_benjamin_graham/)
+  - **Summary:**
+    - Users highlight the book's significance in teaching the principles of investing like a business owner.
+    - The discussion emphasizes the timelessness of Graham's wisdom, despite the book's age.
+    - Some users share how the book has shaped their investment philosophies.
 
-- **Subreddit**: r/suggestmeabook  
-  [Discussion Link](https://www.reddit.com/r/suggestmeabook/comments/1c3jzb9/looking_for_a_psychology_book/)
-  - Users recommend this book for its insights into human behavior, emphasizing its relevance in understanding everyday mistakes and justifications.
+#### [11]. **"Broke Millennial" by Erin Lowry**
+  - **Subreddit:** r/PersonalFinance
+  - **Link:** [Discussion Link](https://www.reddit.com/r/PersonalFinance/comments/1bd8f3l/broke_millennial_what_are_your_thoughts/)
+  - **Summary:**
+    - Users discuss how the book breaks down complex financial topics for millennials.
+    - Many appreciate its relatable tone and actionable advice on student loans and budgeting.
+    - The discussion includes personal stories that resonate with the book's themes of financial empowerment.
 
-These discussions highlight the profound impact these books have had on readers, with insights ranging from personal transformations to practical applications in daily life and work.
+This comprehensive summary captures a range of opinions and discussions from Reddit about the selected finance books, helping to illustrate their impact and reception among readers.
