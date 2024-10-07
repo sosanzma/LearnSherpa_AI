@@ -1,4 +1,4 @@
-# Learnsherpa_ai: Your AI-Powered Book Discovery Assistant
+# Learnsherpa AI : Your chatbot AI-Powered Book Discovery Assistant
 
 ## 📚 Discover Your Next Great Read with Ease
 
