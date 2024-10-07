@@ -2,15 +2,23 @@
 
 ## 📚 Discover Your Next Great Read with Ease
 
-Are you tired of endlessly scrolling through book recommendations, unsure which ones are truly worth your time? Enter Learnsherpa_ai – your personal AI-powered book discovery assistant that curates the best reads tailored to your interests.
+Are you tired of endlessly scrolling through book recommendations, unsure which ones are truly worth your time? Enter Learnsherpa_ai – your personal AI-powered book discovery assistant that not only curates the best reads tailored to your interests but also lets you **chat directly with the AI** to explore book insights in real-time
 
 ### 🌟 Why Learnsherpa_ai?
 
 In today's information-rich world, finding the perfect book can feel like searching for a needle in a haystack. Learnsherpa_ai solves this problem by:
 - Leveraging AI to analyze thousands of book reviews and ratings
 - Providing in-depth, unbiased summaries from various sources
+- Real-time chatbot interaction, ask question about what people say in Reddit or in Goodreads about a specific book,and get instant, AI-driven responses.
 - Saving you countless hours of research and indecision
 
+### 🛠️ Technical Breakdown
+
+   * **Languages**: Python
+   * **Frameworks**: Chainlit, Langchain, Asyncio, Crewai
+   * **Databases**: DeepLake (vector store).
+   * **API Integrations**: OpenAI for embeddings, ActiveLoop for vector storage and Serper for browsing.
+   * **Deployment**: Can be run locally or on cloud environments.
 
 ### 🔍 How It Works
 The workflow is illustrated in the following chart:
@@ -30,6 +38,7 @@ Learnsherpa_ai employs a sophisticated crew of AI agents, each specializing in d
 - **Up-to-date information**: Access the latest reviews and discussions
 - **Easy-to-use command-line interface**: Generate reports with a simple command
 - **Direct links to sources**: Each report includes links to Goodreads reviews and Reddit discussions
+- **Real-time chatbot interaction**:  Ask questions about book reviews, ratings, and discussions using a Chainlit-powered chatbot.
 
 ### 📊 Example Report
 
