@@ -37,6 +37,7 @@ def run(genre):
         f.write(result_str)
 
     print(f"Report saved to {filename}")
+    return filename
 
 def train():
     """

@@ -87,7 +87,7 @@ class AgentBooksV1Crew:
             goal=self.agents_config['orchestrator']['goal'],
             backstory=self.agents_config['orchestrator']['backstory'],
             verbose=False,
-            llm=self.get_llm('gpt-4o-mini')
+            llm=self.get_llm('gpt-4o-2024-08-06')
         )
 
     @task
