@@ -21,7 +21,7 @@ def read_reports(report_file=None):
             filename = f"{report_type}_report.txt"
             filepath = os.path.join('tmp_reports', filename)
             if os.path.exists(filepath):
-                with open(filepath, 'r', encoding='utf-8') as f:
+                with open(filepath, 'r', encoding='cp1252') as f:
                     content = f.read()
                 if content:
                     reports[report_type] = content
