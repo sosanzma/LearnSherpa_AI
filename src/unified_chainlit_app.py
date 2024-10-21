@@ -53,16 +53,19 @@ async def main(message: cl.Message):
             update_tasks = [send_update_message(msg, delay) for msg, delay in update_messages]
 
             # Wait for all tasks to complete
-            await asyncio.gather(crew_task, *update_tasks)
+            results = await asyncio.gather(crew_task, *update_tasks)
 
-            report_path = f"reports/{genre.replace(' ', '_').lower()}_report_latest.txt"
+            latest_report_filename = results[0]
+
             
-            with open(report_path, 'r') as f:
+            # Leer el contenido del reporte
+            with open(latest_report_filename, 'r') as f:
                 report_content = f.read()
 
             # Send the report to the user
             await cl.Message(content=f"Report generated for genre: {genre}").send()
             await cl.Message(content=report_content).send()
+
 
             await cl.Message(content="Populating the database with the generated report...").send()
 
