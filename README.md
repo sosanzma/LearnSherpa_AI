@@ -15,7 +15,7 @@ In today's information-rich world, finding the perfect book can feel like search
 ### 🛠️ Technical Breakdown
 
    * **Languages**: Python
-   * **Frameworks**: Chainlit, Langchain, Asyncio, Crewai
+   * **Frameworks**: Chainlit, Langchain, Asyncio, Crewai 
    * **Databases**: DeepLake (vector store).
    * **API Integrations**: OpenAI for embeddings, ActiveLoop for vector storage and Serper for browsing.
    * **Deployment**: Can be run locally or on cloud environments.
@@ -95,3 +95,10 @@ Don't let another great book pass you by. With Learnsherpa_ai, you're always jus
 ---
 
 📣 I'm constantly improving Learnsherpa_ai. If you have any feedback or suggestions, please open an issue or submit a pull request. Happy reading! 📚
+
+
+## See a demo in action 
+
+ [Demo video ](https://youtu.be/DIg3AFMrmHY)
+
+
