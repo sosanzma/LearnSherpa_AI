@@ -97,8 +97,11 @@ Don't let another great book pass you by. With Learnsherpa_ai, you're always jus
 📣 I'm constantly improving Learnsherpa_ai. If you have any feedback or suggestions, please open an issue or submit a pull request. Happy reading! 📚
 
 
-## See a demo in action 
+## See a demo in actionn
 
- [Demo video ](https://youtu.be/DIg3AFMrmHY)
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=DIg3AFMrmHY" title="Demo of LearnSherpa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
