@@ -99,5 +99,4 @@ Don't let another great book pass you by. With Learnsherpa_ai, you're always jus
 
 ## See a demo in action
 
-(https://github.com/user-attachments/assets/27d78b53-ad8f-4a91-9508-7179a6507464)
-
+https://github.com/user-attachments/assets/27d78b53-ad8f-4a91-9508-7179a6507464
