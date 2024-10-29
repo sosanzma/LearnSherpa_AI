@@ -12,13 +12,22 @@ In today's information-rich world, finding the perfect book can feel like search
 - Real-time chatbot interaction, ask question about what people say in Reddit or in Goodreads about a specific book,and get instant, AI-driven responses.
 - Saving you countless hours of research and indecision
 
-### 🛠️ Technical Breakdown
+## See a demo in action
 
-   * **Languages**: Python
-   * **Frameworks**: Chainlit, Langchain, Asyncio, Crewai 
-   * **Databases**: DeepLake (vector store).
-   * **API Integrations**: OpenAI for embeddings, ActiveLoop for vector storage and Serper for browsing.
-   * **Deployment**: Can be run locally or on cloud environments.
+https://github.com/user-attachments/assets/27d78b53-ad8f-4a91-9508-7179a6507464
+
+
+### 📊 Example Report
+
+Check out this [example report for Sociology books](./reports/sociology_report_20240903_103808.md) or the [example report for Productivity books](./reports/productivity_report_20240906_113032.md) to see the depth and quality of information Learnsherpa_ai provides.
+
+In each report, you'll find:
+- Detailed book summaries
+- Goodreads ratings and review summaries
+- Reddit discussion highlights
+- Direct links to Goodreads book pages and relevant Reddit threads
+
+These links allow you to dive deeper into specific reviews or join ongoing discussions about the books that interest you most.
 
 ### 🔍 How It Works
 The workflow is illustrated in the following chart:
@@ -40,17 +49,7 @@ Learnsherpa_ai employs a sophisticated crew of AI agents, each specializing in d
 - **Direct links to sources**: Each report includes links to Goodreads reviews and Reddit discussions
 - **Real-time chatbot interaction**:  Ask questions about book reviews, ratings, and discussions using a Chainlit-powered chatbot.
 
-### 📊 Example Report
 
-Check out this [example report for Sociology books](./reports/sociology_report_20240903_103808.md) or the [example report for Productivity books](./reports/productivity_report_20240906_113032.md) to see the depth and quality of information Learnsherpa_ai provides.
-
-In each report, you'll find:
-- Detailed book summaries
-- Goodreads ratings and review summaries
-- Reddit discussion highlights
-- Direct links to Goodreads book pages and relevant Reddit threads
-
-These links allow you to dive deeper into specific reviews or join ongoing discussions about the books that interest you most.
 
 ### 🛠️ Installation
 
@@ -95,8 +94,3 @@ Don't let another great book pass you by. With Learnsherpa_ai, you're always jus
 ---
 
 📣 I'm constantly improving Learnsherpa_ai. If you have any feedback or suggestions, please open an issue or submit a pull request. Happy reading! 📚
-
-
-## See a demo in action
-
-https://github.com/user-attachments/assets/27d78b53-ad8f-4a91-9508-7179a6507464
