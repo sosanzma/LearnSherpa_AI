@@ -99,5 +99,5 @@ Don't let another great book pass you by. With Learnsherpa_ai, you're always jus
 
 ## See a demo in action
 
-[![Video](https://img.youtube.com/vi/DIg3AFMrmHY/0.jpg)](https://www.youtube.com/watch?v=DIg3AFMrmHY)
+![Demo Video](img/video_Demo_learnsherpa.mp4)
 
