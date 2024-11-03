@@ -8,8 +8,12 @@ from learnsherpa_ai.crew import AgentBooksV1Crew
 # crew locally, so refrain from adding necessary logic into this file.
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
+if len(sys.argv) > 1:
+    genre = sys.argv[1]
+else:
+    raise ValueError("No genre provided. Please specify a genre as a command line argument.")
 
-def run(genre):  
+def run():  
     """
     Run the crew.
     """
